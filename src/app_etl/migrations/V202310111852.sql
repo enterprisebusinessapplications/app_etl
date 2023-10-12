@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS etl.etl
+(
+    id int4 NOT NULL
+    GENERATED ALWAYS AS IDENTITY
+    (INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START 1 CACHE 1 NO CYCLE),
+	starttime timestamp NOT NULL,
+	endtime timestamp NULL,
+	status varchar (10) NULL,
+	CONSTRAINT etl_pkey PRIMARY KEY(id)
+);

@@ -1,0 +1,6 @@
+services:
+  app_etl:
+    pull_policy: build
+    image: app_etl:latest
+    build:
+      dockerfile: Dockerfile

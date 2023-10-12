@@ -1,0 +1,15 @@
+
+Malaria Indicators:
+    https://ghoapi.azureedge.net/api/Indicator?$filter=contains(IndicatorName,'Malaria')
+
+Malaria Annual Confirmed Cases:
+    https://ghoapi.azureedge.net/api/MALARIA_CONF_CASES
+
+Malaria Annual Presumed Cases:
+    https://ghoapi.azureedge.net/api/MALARIA_PRES_CASES
+    
+Malaria Annual Suspected Cases:
+    https://ghoapi.azureedge.net/api/MALARIA_SUSPECTS
+
+
+

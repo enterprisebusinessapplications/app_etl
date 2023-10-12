@@ -1,0 +1,115 @@
+{
+    "@odata.context": "https://ghoapi.azureedge.net/api/$metadata#Indicator",
+    "value": [
+        {
+            "IndicatorCode": "MALARIA_PF_INDIG",
+            "IndicatorName": "Number of indigenous P. falciparum malaria cases",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_IMPORTED",
+            "IndicatorName": "Number of imported malaria cases",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_ITN_COVERAGE",
+            "IndicatorName": "Population with access to an insecticide-treated bed net (ITN) for malaria protection (%), modelled",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_EST_DEATHS",
+            "IndicatorName": "Estimated number of malaria deaths",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_EST_INCIDENCE",
+            "IndicatorName": "Estimated malaria incidence (per 1000 population at risk)",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_MICR_TEST",
+            "IndicatorName": "Number of malaria suspects examined by microscopy",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_EST_CASES",
+            "IndicatorName": "Estimated number of malaria cases",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_SUSPECTS",
+            "IndicatorName": "Number of suspected malaria cases",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_INDIG_STATUS",
+            "IndicatorName": "Status of indigenous malaria cases",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_PV_INDIG",
+            "IndicatorName": "Number of indigenous P. vivax malaria cases",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_INDIG",
+            "IndicatorName": "Number of indigenous malaria cases",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_CONF_CASES",
+            "IndicatorName": "Number of confirmed malaria cases",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_RDT_TEST",
+            "IndicatorName": "Number of malaria suspects examined by rapid diagnostic test (RDT)",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_ACT_TREATED",
+            "IndicatorName": "Number of malaria cases treated with artemisinin-based combination therapies (ACTs)",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_MICR_POS",
+            "IndicatorName": "Number of malaria positive cases by microscopy",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_RDT_POS",
+            "IndicatorName": "Number of malaria positive cases by rapid diagnostic test (RDT)",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_1STLINE_TREATED",
+            "IndicatorName": "Number of malaria cases treated with any first\u00a0 line tx courses (including artemisinin-based combination therapies (ACTs))",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_EST_MORTALITY",
+            "IndicatorName": "Estimated malaria mortality rate (per 100 000 population)",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_IPTP3_COVERAGE",
+            "IndicatorName": "Pregnant women attending antenatal care\u00a0 at least once and receiving at least 3 doses of Intermittent Preventive Treatment of Malaria for Pregnant Women (IPTp3) (%)",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_PRES_CASES",
+            "IndicatorName": "Number of presumed malaria cases",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_IRS_COVERAGE",
+            "IndicatorName": "Number of people protected from malaria by indoor residual spraying (IRS)",
+            "Language": "EN"
+        },
+        {
+            "IndicatorCode": "MALARIA_TOTAL_CASES",
+            "IndicatorName": "Total number of\u00a0 malaria cases (presumed + confirmed cases)",
+            "Language": "EN"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+version: '3'
+
+services:
+  postgres_service:
+    image: 'postgres:latest'
+    container_name: app_etl_database
+    restart: always
+    ports:
+      - ${POSTGRES_PORT}:5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_PORT=${POSTGRES_PORT}
+    env_file:
+      - .env
+    volumes:
+      - ./postgres_data/:/var/lib/postgresql/data/
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d postgres" ]
+      start_period: 0s
+      interval: 10s
+      timeout: 30s
+      retries: 3
+  app_etl_db_flyway_migrations:
+    container_name: app_etl_db_flyway_migrations
+    environment:
+      - FLYWAY_USER=${POSTGRES_USER}
+      - FLYWAY_PASSWORD=${POSTGRES_PASSWORD}
+      - FLYWAY_URL=jdbc:postgresql://postgres_service:${POSTGRES_PORT}/${POSTGRES_DB}
+      - FLYWAY_SCHEMAS=flyway
+      - FLYWAY_GROUP=true
+    volumes:
+      - $PWD/src/app_etl/migrations:/flyway/sql
+    image: flyway/flyway:latest
+    command: -locations=filesystem:/flyway/sql -connectRetries=60 migrate
+    env_file:
+      - .env  
+    depends_on:
+      postgres_service:  
+        condition: service_healthy
+  app_etl:
+    image: app_etl:latest
+    ports:
+      - '${APP_ETL_HOST}:5000'
+    env_file:
+      - .env  
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_PORT=${POSTGRES_PORT}
+    depends_on:
+      postgres_service:  
+        condition: service_healthy
